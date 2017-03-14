@@ -6,6 +6,7 @@ import GrideViewItem from './grid-view-item'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import * as Actions from '../actions/ufile'
+import './grid-view.less'
 
 
 class GridView extends React.Component {
@@ -26,7 +27,7 @@ class GridView extends React.Component {
             if (this.props.data.isdir) {
                 that.props.actions.switchDirXHR(this.props.data.path + '/');
             } else {
-                console.log(this.props.data);
+                that.props.actions.showInfo(this.props.data, true);
             }
         }
     }
@@ -48,7 +49,7 @@ class GridView extends React.Component {
         } else {
             this.props.actions.UFileInit();
         }
-        return <div>{ items }</div>;
+        return <div className="clear-float file-browser">{ items }</div>;
     }
 }
 

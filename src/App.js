@@ -1,21 +1,15 @@
 import React, {Component} from 'react';
-import {WrappedHorizontalLoginForm} from './form'
-import {MyUpload} from './upload'
 import './App.less';
-import {ItemCar} from './item-car'
 import {Layout} from 'antd';
-import {GradViewItem} from './components/grid-view-item'
-const {Header, Footer, Sider, Content} = Layout;
-
 import {Provider} from 'react-redux'
-// import Num from './components/num'
 import GridView from './components/grid-view'
 import PathView from './components/path-view'
 import HeaderView from './components/header'
 import {store} from './reducers'
+import FileInfo from './components/file-info'
 
 
-
+const {Header, Footer, Sider, Content} = Layout;
 
 
 class Aaa extends Component {
@@ -29,6 +23,7 @@ class Aaa extends Component {
                     </Header>
                     <Content>
                         <GridView></GridView>
+                        <FileInfo></FileInfo>
                     </Content>
                     <Footer>
                         <PathView></PathView>

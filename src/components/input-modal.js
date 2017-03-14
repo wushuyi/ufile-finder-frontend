@@ -15,20 +15,22 @@ export class InputModal extends React.Component {
     emitEmpty = () => {
         this.dirNameInput.focus();
         this.setState({dirName: ''});
-    }
+    };
 
     onChangedirName = (e) => {
         this.setState({dirName: e.target.value});
-    }
+    };
 
     onOk = () => {
         this.props.prveNode.setState({
                 showModal: false
             }
         );
-        this.props.createDir(this.state.dirName);
+        if(this.state.dirName){
+            this.props.createDir(this.state.dirName);
+        }
         this.setState({dirName: ''});
-    }
+    };
 
     onCancel = () => {
         this.props.prveNode.setState({
@@ -36,7 +38,7 @@ export class InputModal extends React.Component {
             }
         );
         this.setState({dirName: ''});
-    }
+    };
 
 
     render() {
@@ -47,6 +49,7 @@ export class InputModal extends React.Component {
                    visible={this.props.prveNode.state.showModal}
                    onOk={this.onOk}
                    onCancel={this.onCancel}
+                   maskClosable={false}
             >
                 <Input
                     placeholder="文件夹名称"

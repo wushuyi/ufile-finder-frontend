@@ -6,6 +6,7 @@
 export const INIT = 'UFILE_INIT';
 export const SWITCHDIR = 'UFILE_SWITCHDIR';
 export const ADDFILE = 'UFILE_ADDFILE';
+export const SHOW_INFO = 'UFILE_SHOW_INFO';
 
 export const GET = 'UFILE_GET';
 export const HEAD = 'UFILE_HEAD';

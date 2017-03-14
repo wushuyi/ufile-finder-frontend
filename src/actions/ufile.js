@@ -161,3 +161,11 @@ export function addDirXHR(fpath, fname) {
             })
     }
 }
+
+export function showInfo(data, show) {
+    return {
+        type: types.SHOW_INFO,
+        data,
+        show
+    }
+}

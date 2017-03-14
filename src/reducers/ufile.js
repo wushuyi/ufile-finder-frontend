@@ -6,6 +6,10 @@ import * as UFileTypes from '../constants/UfileTypes'
 const initialState = {
     files: {},
     nowPath: "/",
+    showinfo: {
+        show: false,
+        data: {}
+    }
 };
 
 export function ufile(state = initialState, action) {
@@ -23,6 +27,14 @@ export function ufile(state = initialState, action) {
                     files: action.files,
                     nowPath: action.nowPath
                 });
+        case UFileTypes.SHOW_INFO:
+            return Object.assign({}, state, {
+                showinfo: {
+                    show: action.show,
+                    data: action.data
+                }
+            });
+
         default:
             return state;
     }

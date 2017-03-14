@@ -34,3 +34,16 @@
 .show {
   display: block;
 }
+
+.clear-float {
+  &:before {
+    content: '';
+    clear: both;
+    display: block;
+  }
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+}

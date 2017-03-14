@@ -3,7 +3,6 @@
  */
 import React from 'react'
 import './grid-view-item.less'
-
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import * as Actions from '../actions/ufile'
