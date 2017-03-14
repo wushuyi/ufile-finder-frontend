@@ -24,7 +24,7 @@ class FileInfo extends React.Component {
         let src;
         if (data.info.mime_type.indexOf('image') >= 0) {
             src = setting.UFileCdnService + data.path;
-            src = <p><img src={src} alt=""/></p>
+            src = <p><img style={{'max-width': '100%'}} src={src} alt=""/></p>
         }
 
         return (
@@ -35,6 +35,7 @@ class FileInfo extends React.Component {
                 <p>文件名: {data.path}</p>
                 <p>文件大小: {data.info.size}</p>
                 <p>文件类型: {data.info.mime_type}</p>
+                <p>cdn链接: {'http:' + setting.UFileCdnService + data.path}</p>
             </Card>
         )
     }
