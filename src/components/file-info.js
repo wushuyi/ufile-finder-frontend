@@ -24,7 +24,7 @@ class FileInfo extends React.Component {
         let src;
         if (data.info.mime_type.indexOf('image') >= 0) {
             src = setting.UFileCdnService + data.path;
-            src = <p><img style={{'max-width': '100%'}} src={src} alt=""/></p>
+            src = <p><img style={{maxWidth: '100%'}} src={src} alt=""/></p>
         }
 
         return (
